@@ -13,6 +13,7 @@
 3. db.restaurants.find({cuisine: {$regex: /ice/i}}, {"address.zipcode": 1})
 
 **Provide a query showing the street and street number of Chinese restaurants ordered by zip code.**
+
 4. db.restaurants.find({cuisine: "Chinese"}, {"address.building": 1, "address.street": 1, _id: false}).sort({"address.zipcode": -1})
 
 **Show only the American restaurants in Manhattan.**
